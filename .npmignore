@@ -12,3 +12,4 @@ build-parser.sh
 .travis.yml
 
 webpack.browser.js
+webpack.node.js
