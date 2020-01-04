@@ -6,14 +6,12 @@ const TerserPlugin = require('terser-webpack-plugin'); // support for ES6+ (succ
 
 
 const browserConfig = {
-	node: false,
-	node: {
-		fs: "empty",
-		Buffer: false, // still embeds Buffer
-	},
+	node: true,
 	mode: 'production',
+	target: 'node',
+	node: {
+	},
 	// devtool:
-	target: 'web',
 	context: path.resolve(__dirname, 'src'),
 	optimization: {
 		minimize: true,
@@ -37,18 +35,11 @@ const browserConfig = {
 		library: 'sqlparser',
 
 
-		libraryTarget: 'umd',
-		umdNamedDefine: true,   // Important
-		globalObject: 'this',
+		libraryTarget: 'commonjs2',
+		libraryExport: 'default',
 	},
 
 	externals: {
-		"aws-sdk": {
-				commonjs: 'AWS',
-				commonjs2: 'AWS',
-				amd: 'AWS',
-				root: 'AWS'
-		},
 	},
 	module: {
 		rules: [
