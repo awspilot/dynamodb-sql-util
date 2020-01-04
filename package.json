@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0-beta.2",
 	"name": "@awspilot/dynamodb-sql-util",
 	"author": {
 		"name": "Adrian Praja",
@@ -20,8 +20,8 @@
 		"url": "https://github.com/awspilot/dynamodb-sql-util"
 	},
 
-	"main": "./dist/sqlparser.node.min.js",
-	"browser": "./dist/sqlparser.browser.min.js",
+	"main": "./dist/sqlparser.node.js",
+	"browser": "./dist/sqlparser.browser.js",
 
 	"license": "MIT",
 	"dependencies": {
