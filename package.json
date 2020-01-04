@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0-beta.2",
+	"version": "1.0.0",
 	"name": "@awspilot/dynamodb-sql-util",
 	"author": {
 		"name": "Adrian Praja",
@@ -54,7 +54,7 @@
 		"build:browser": "webpack  --config webpack.browser.js",
 
 		"buildnodeparser": "jison src/sqlparser.node.jison -o dist/sqlparser.node.js -m commonjs",
-		"buildbrowserparser": "jison src/sqlparser.browser.jison -o dist/sqlparser.browser.js -m js"
+		"buildbrowserparser": "jison src/sqlparser.browser.jison -o dist/sqlparser.browser.js"
 	},
 	"engines": {
 		"node": "*"
