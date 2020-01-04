@@ -16,11 +16,13 @@ javascript_data_func_buffer
 			var buf;
 
 			/// #if BROWSER
-			if (typeof Buffer.from === "function") { // Node 5.10+
-				buf = Buffer.from( $5, $7 );
-			} else { // older Node versions, now deprecated
-				buf = new Buffer( $5, $7 );
-			}
+
+				if (!$7)
+					buf = Uint8Array.from( $5 , function (c) { return c.charCodeAt(0) } )
+
+				if ($7 === 'base64')
+					buf = Uint8Array.from( btoa($5) , function (c) { return c.charCodeAt(0) } )
+
 			/// #else
 			if (typeof Buffer.from === "function") { // Node 5.10+
 				buf = Buffer.from( $5, $7 );
