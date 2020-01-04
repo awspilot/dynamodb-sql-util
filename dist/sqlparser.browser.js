@@ -1407,7 +1407,7 @@ var sqlparser = function () {
 				case 726:
 
 ////////////////////
-					if (Buffer.isBuffer($$[$0])) {
+					if ($$[$0] instanceof Uint8Array) {
 						this.$ = { B: $$[$0] };
 						return;
 					}
