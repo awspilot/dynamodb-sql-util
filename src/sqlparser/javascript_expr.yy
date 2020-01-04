@@ -5,7 +5,7 @@ javascript_raw_expr
 		{
 
 			/// #if BROWSER
-			if (Buffer.isBuffer($1) ) {
+			if ( $1 instanceof Uint8Array ) {
 				$$ = { B: $1 }
 				return;
 			}
