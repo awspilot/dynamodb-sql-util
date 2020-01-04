@@ -10,6 +10,7 @@ const browserConfig = {
 	mode: 'production',
 	target: 'node',
 	node: {
+		fs: "empty",
 	},
 	// devtool:
 	context: path.resolve(__dirname, 'src'),
@@ -26,8 +27,8 @@ const browserConfig = {
 	plugins: [
 	],
 	entry: {
-		'sqlparser.node': path.resolve(__dirname, './src/sqlparser.js'),
-		'sqlparser.node.min': path.resolve(__dirname, './src/sqlparser.js')
+		'sqlparser.node': path.resolve(__dirname, './src/index.js'),
+		'sqlparser.node.min': path.resolve(__dirname, './src/index.js')
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
