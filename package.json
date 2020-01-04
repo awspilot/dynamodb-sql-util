@@ -20,8 +20,8 @@
 		"url": "https://github.com/awspilot/dynamodb-sql-util"
 	},
 
-	"main": "./lib/dynamodb",
-	"browser": "./dist/dynamodbjs",
+	"main": "./dist/sqlparser.node.min.js",
+	"browser": "./dist/sqlparser.browser.min.js",
 
 	"license": "MIT",
 	"dependencies": {
