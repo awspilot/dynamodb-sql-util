@@ -28,7 +28,7 @@
 
 	},
 	"peerDependencies": {
-		"aws-sdk": "^2.432.0"
+
 	},
 	"devDependencies": {
 		"assert": "1.4.1",
