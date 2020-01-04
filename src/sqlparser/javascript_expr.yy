@@ -3,10 +3,19 @@
 javascript_raw_expr
 	: def_resolvable_expr
 		{
+
+			/// #if BROWSER
 			if (Buffer.isBuffer($1) ) {
 				$$ = { B: $1 }
 				return;
 			}
+			/// #else
+			if (Buffer.isBuffer($1) ) {
+				$$ = { B: $1 }
+				return;
+			}
+			/// #endif
+
 			if (typeof $1 === "object") {
 				$$ = { S: $1.toString() }
 			}

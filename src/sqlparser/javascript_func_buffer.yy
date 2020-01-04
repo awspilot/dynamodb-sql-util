@@ -14,12 +14,21 @@ javascript_data_func_buffer
 				throw ('TypeError: Buffer.from - only base64 supported')
 
 			var buf;
+
+			/// #if BROWSER
 			if (typeof Buffer.from === "function") { // Node 5.10+
 				buf = Buffer.from( $5, $7 );
 			} else { // older Node versions, now deprecated
 				buf = new Buffer( $5, $7 );
 			}
+			/// #else
+			if (typeof Buffer.from === "function") { // Node 5.10+
+				buf = Buffer.from( $5, $7 );
+			} else { // older Node versions, now deprecated
+				buf = new Buffer( $5, $7 );
+			}
+			/// #endif
+
 			$$ = buf;
 		}
 	;
-
