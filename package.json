@@ -68,7 +68,7 @@
 		"build:browser": "webpack  --config webpack.browser.js",
 
 		"start": "webpack  --config webpack.browser.js -w ",
-		"buildsqlparser": "jison src/sqlparser.jison -o lib/sqlparser.js"
+		"buildsqlparser": "jison src/sqlparser.jison -o src/sqlparser.js"
 	},
 	"engines": {
 		"node": "*"
