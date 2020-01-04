@@ -50,7 +50,7 @@ const browserConfig = {
 					{
 						loader: "ifdef-loader",
 						options: {
-							BROWSER: true,
+							BROWSER: false,
 						}
 					},
 					{loader: 'babel-loader'},
