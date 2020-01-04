@@ -36,7 +36,6 @@ cat src/sqlparser/parser.yy					\
 	src/sqlparser/drop_index.yy				\
 	src/sqlparser/scan.yy					\
 	\
-	src/sqlparser/debug.yy					\
 	> src/sqlparser.jison
 
 npm run buildsqlparser
