@@ -1,7 +1,5 @@
 #!/bin/bash
 
-nvm use
-
 cat src/sqlparser/parser.yy					\
 	src/sqlparser/sql_keyword.yy			\
 	src/sqlparser/dynamodb_keyword.yy		\
