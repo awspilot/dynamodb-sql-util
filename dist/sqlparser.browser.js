@@ -1384,13 +1384,15 @@ var sqlparser = function () {
 					var buf;
 
 ////////////////////
-					if (typeof Buffer.from === "function") {
-						// Node 5.10+
-						buf = Buffer.from($$[$0 - 3], $$[$0 - 1]);
-					} else {
-						// older Node versions, now deprecated
-						buf = new Buffer($$[$0 - 3], $$[$0 - 1]);
-					}
+
+					if (!$$[$0 - 1]) buf = Uint8Array.from($$[$0 - 3], function (c) {
+						return c.charCodeAt(0);
+					});
+
+					if ($$[$0 - 1] === 'base64') buf = Uint8Array.from(btoa($$[$0 - 3]), function (c) {
+						return c.charCodeAt(0);
+					});
+
 //////////////
 /////////////////////////////////////////////
 ///////////////////
