@@ -1,0 +1,4 @@
+1.0.1
+- Fix extra ProvisionedThroughput for PAY_PER_REQUEST
+1.0.0
+- lost track
